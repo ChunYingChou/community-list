@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>社群名單</title>
+  <!-- 載入Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <!-- 載入Google fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@700&display=swap" rel="stylesheet">
+
+  <!-- 載入font-awesome -->
+  <script src="https://kit.fontawesome.com/c7704bf3c1.js" crossorigin="anonymous"></script>
+
+  <title>replit</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+  <!-- Nav Bar -->
+  <nav class="navbar navbar-light" style="background-color:#DCB5FF;">
+    <div class="container-fluid d-flex justify-content-around">
+      <a class="navbar-brand" style="color:#FFFFFF"> My Friends List </a>
+      <form class="d-flex" id="search-form">
+        <input class="form-control me-2" type="search" placeholder="Search your friend" aria-label="Search"
+          id="search-input">
+        <button class="btn btn-outline-light" type="submit" id="search-submit-button">Search</button>
+
+      </form>
+    </div>
+  </nav>
+
+
+  <div class="container mt-5">
+    <div class="row">
+
+      <!-- data-panel的位置 -->
+      <div class="row" id="data-panel">
+
+        <!-- User Card -->
+        <div class="col-sm-3">
+          <div class="mb-3">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <p class="card-text">Name</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+  <!-- message icon area-->
+
+  <div id="message-icon-area">
+    <!-- message icon -->
+    <a href=""><i class="fa-brands fa-facebook-messenger fa-3x" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasRight" aria-controls="offcanvasRight"></i></a>
+    <!-- Badges -->
+    <span class="translate-middle badge rounded-pill bg-danger">
+      99+
+      <span class="visually-hidden">unread messages</span>
+    </span>
+    <!-- offcanvas -->
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasRight" aria-labelledby="offcanvasRightLabel"
+      data-bs-keyboard="true">
+      <div class="offcanvas-header">
+        <h5 id="offcanvasRightLabel">Message to ...</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+
+      <div class="offcanvas-body mt-3">
+        <div class="mb-3">
+          <label for="exampleFormControlInput1" class="form-label">name</label>
+          <input type="text" class="form-control" id="exampleFormControlInput1" placeholder="who">
+        </div>
+        <div class="mb-3">
+          <label for="exampleFormControlTextarea1" class="form-label">message content</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"
+            placeholder="what do you want to say"></textarea>
+        </div>
+
+        <div class="send-button d-flex justify-content-end">
+          <button type="button" class="btn btn-outline-primary mt-3 " id="send-button" data-bs-toggle="modal"
+            data-bs-target="#staticBackdrop">Send</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+  <!-- Paginator -->
+
+  <nav aria-label=" Page navigation example" class="d-flex justify-content-center" style="background-color:#DCB5FF">
+    <ul class="pagination mt-3" id="paginator">
+      <li class="page-item"><a class="page-link" href="#">1</a></li>
+      <li class="page-item"><a class="page-link" href="#">2</a></li>
+      <li class="page-item"><a class="page-link" href="#">3</a></li>
+    </ul>
+  </nav>
+
+  <!-- User Modal -->
+
+  <div class="modal fade" id="user-modal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <h5 class="modal-title" id="user-modal-name">Name</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+
+        <div class="modal-body" id="user-modal-body">
+          <div class="row">
+            <!-- modal視窗裡面的左邊圖片欄(佔1/2) -->
+            <div class="col-sm-6 d-flex justify-content-center" id="user-modal-avatar">
+              <img src="..." class="img-fluid" justify-content="center">
+            </div>
+            <!-- modal視窗裡面的右邊文字欄(佔1/2) -->
+            <div class="col-sm-6">
+              <p id="user-modal-gender">male</p>
+              <p id="user-modal-birthday">1992/10/15</p>
+              <p id="user-modal-age">30</p>
+              <p id="user-modal-region">TW</p>
+              <p id="user-modal-email">...gmail.com</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+
+  <!-- send-button modal -->
+
+  <div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="send-button-modal-title">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <p id="send-button-modal-content"></p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" id="send-modal-close">Close</button>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--
+    This script places a badge on your repl's full-browser view back to your repl's cover
+    page. Try various colors for the theme: dark, light, red, orange, yellow, lime, green,
+    teal, blue, blurple, magenta, pink!
+    -->
+  <script src="https://replit.com/public/js/replit-badge.js" theme="blue" defer></script>
+
+  <!-- 先引用axios -->
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+  <!-- 載入Bootstrap JS Bundle -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+  <!-- 載入自己寫的JS檔案(要放在axios的下面) -->
+  <script src="./main.js"></script>
+</body>
+
+</html>

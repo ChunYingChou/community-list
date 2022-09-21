@@ -1,0 +1,43 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-family: "Raleway", sans-serif;
+}
+
+.navbar {
+  background-color:
+    violet;
+}
+
+.navbar-brand {
+  font-family: 'Maven Pro', sans-serif;
+  font-size: 25px;
+  border-radius: 8px;
+  border-style: solid;
+  padding: 5px
+}
+
+.fa-facebook-messenger {
+  position: fixed;
+  right: 50px;
+  bottom: 30px;
+  color:
+    #2894FF;
+  filter: drop-shadow(3px 3px 2px rgba(0, 0, 0, 0.3))
+}
+
+.bg-danger {
+  position: fixed;
+  right: 30px;
+  bottom: 50px;
+}
+
+.card {
+  box-shadow: 1px 1px 2px 2px #cccccc;
+}
+
+
+.card-img-top:hover {
+  opacity: 0.5
+}
